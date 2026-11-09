@@ -1,0 +1,6 @@
+Ten błąd oznacza, że port 3000 na Twoim komputerze jest już używany przez inny program lub wcześniej uruchomiony kontener Docker. Ponieważ port jest zajęty, Docker nie może przypisać do niego nowej usługi.Wykonaj poniższe kroki, aby zlokalizować i rozwiązać ten problem:1.Sprawdź, co zajmuje port 3000:Diagnostyka.Uruchom w terminalu odpowiednie polecenie, aby zidentyfikować proces blokujący port:Linux / macOS:Bashsudo lsof -i :3000
+Windows (PowerShell):PowerShellGet-NetProcess -ConnectionPort 3000
+Verification: Na ekranie pojawi się numer PID procesu oraz nazwa aplikacji lub kontenera, który korzysta z portu 3000.2.Zwolnij port:Rozwiązanie konfliktu.Możesz rozwiązać problem na dwa sposoby:Wyłącz blokujący proces/kontener: Jeśli to stary kontener Docker, wpisz docker stop <ID_kontenera>. Jeśli to inny proces, zamknij go (np. sudo kill -9 <PID>).Zmień port w aplikacji: W pliku docker-compose.yml zmień mapowanie portów, przypisując aplikację do innego wolnego portu na hoście, np.:YAMLports:
+  - "3001:3000"
+Verification: Ponowne uruchomienie polecenia z Kroku 1 nie powinno już pokazywać żadnej aktywnej usługi na porcie 3000.3.Uruchom ponownie środowisko:Finalizacja.Gdy port jest już wolny, uruchom swój projekt ponownie:Bashdocker compose up
+Verification: Kontener uruchomi się poprawnie bez komunikatu o błędzie binda (address already in use).
