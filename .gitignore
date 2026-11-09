@@ -1,0 +1,123 @@
+==========================================
+
+Node.js / NPM / Yarn / Pnpm
+
+==========================================
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+Zależności i pliki wykonywalne pakietów
+
+.pnpm-store/
+.yarn/build-state
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+
+==========================================
+
+Docker
+
+==========================================
+
+Ignoruj potencjalne lokalne override'y konfiguracyjne
+
+docker-compose.override.yml
+docker-compose.local.yml
+
+Dane i obrazy wyeksportowane z Dockera
+
+*.tar
+*.tar.gz
+
+==========================================
+
+MongoDB & Bazy Danych
+
+==========================================
+
+Katalogi z lokalnymi danymi wolumenów MongoDB (jeśli mapowane na hosta)
+
+mongo-data/
+data/db/
+dbdata/
+*.dump
+*.sqldump
+
+==========================================
+
+Zmienne Środowiskowe (Zabezpieczenia)
+
+==========================================
+
+Niewykluczone sekrety i klucze API – BARDZO WAŻNE!
+
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
+(Opcjonalnie) Zachowaj wzorcowy plik .env.example w repozytorium
+
+!.env.example
+
+==========================================
+
+Logi i Pliki Tymczasowe
+
+==========================================
+
+logs/
+*.log
+*.sys
+*.tmp
+*.bak
+
+==========================================
+
+Pliki Budowania / Dystrybucji (Build & Dist)
+
+==========================================
+
+dist/
+build/
+out/
+.next/
+.nuxt/
+.vuepress/dist/
+
+==========================================
+
+Środowisko i IDE (Edytory Kodu)
+
+==========================================
+
+VS Code
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+JetBrains (WebStorm, IntelliJ itp.)
+
+.idea/
+
+Systemowe (macOS / Windows)
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
