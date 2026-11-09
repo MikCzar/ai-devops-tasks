@@ -1,0 +1,7 @@
+Czym jest DevOps? Wyjaśnij w 3 zdaniach.
+
+DevOps to kultura i podejście łączące zespoły tworzące oprogramowanie (Development) z działami utrzymania systemów (Operations). Jego głównym celem jest skrócenie cyklu życia oprogramowania oraz dostarczanie wysokiej jakości aktualizacji w sposób szybki i zautomatyzowany. Osiąga się to poprzez ciągłą integrację, automatyzację testów oraz bliską współpracę na każdym etapie projektu.
+
+Jakie są 3 najpopularniejsze narzędzia używane w DevOps?
+
+Do najpopularniejszych i najczęściej wykorzystywanych narzędzi w ekosystemie DevOps należą:   Docker – absolutny standard w dziedzinie konteneryzacji. Pozwala "zamknąć" aplikację wraz ze wszystkimi jej zależnością w lekkim, izolowanym kontenerze, dzięki czemu działa ona identycznie na komputerze programisty, środowisku testowym i na produkcji.   Kubernetes (K8s) – lider w kategorii orkiestracji kontenerów. Służy do automatyzacji wdrażania, skalowania i zarządzania aplikacjami kontenerowymi w dużych klastrach (gdy projekt rozrasta się poza pojedynczy serwer).   Terraform – najpopularniejsze narzędzie typu Infrastructure as Code (IaC). Umożliwia definiowanie i zarządzanie całą infrastrukturą IT (serwerami, sieciami, bazami danych w chmurze) za pomocą kodu, co pozwala na jej szybkie i powtarzalne tworzenie.   Warto wspomnieć również o niezwykle popularnych narzędzjach do automatyzacji procesów CI/CD (ciągłej integracji i wdrażania), takich jak GitHub Actions czy klasyczny Jenkins.
